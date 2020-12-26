@@ -14,8 +14,8 @@ $(function () {
         // 整理参数
         let data = {
             q: content,
-            from: 'zh',
-            to: 'en',
+            from: $('#btnF').attr('index'),
+            to: $('#btnT').attr('index'),
             appid: '20201224000654956',
             salt: salt,
             sign: sign
