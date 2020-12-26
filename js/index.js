@@ -6,7 +6,8 @@ $(function () {
 
     $('#btn').on('click', function () {
         //获取翻译内容
-        let content = $('#iptForm').val();
+        let content = $('#iptForm').val().trim();
+        if (content == '') return; //没有输入内容直接return
         //随机数
         let salt = Date.now();
         //签名
@@ -35,6 +36,12 @@ $(function () {
             }
         });
     });
+
+    // 监听输入框回车事件
+    $('#iptForm').on('keyup', function (e) {
+        if (e.keyCode !== 13) return;
+        $('#btn').click();
+    })
 
     //清空输入框
     $('#btnClean').on('click', function () {
