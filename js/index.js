@@ -36,6 +36,16 @@ $(function () {
         });
     });
 
+    //清空输入框
+    $('#btnClean').on('click', function () {
+        $('#iptForm').val('');
+        $('#iptTo').val('');
+    })
+    //存储数据
+    $('#btnPre').on('click',function () {
+        console.log('再想想怎么保存');
+    })
+
     //封装对象转字符串函数
     function getString(data) {
         let rows = [];
