@@ -1,7 +1,7 @@
 $(function () {
     //给每个选项设置点击事件
     $('ul.dropdown-menu li').on('click', function () {
-        $(this).parent().siblings('button').html($(this).text()+' <span class="caret"></span>');
+        $(this).parent().siblings('button').html($(this).text()+' <span class="caret"></span>').attr('index',$(this).attr('index'));
     })
 
     $('#btn').on('click', function () {
