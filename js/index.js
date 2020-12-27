@@ -79,7 +79,7 @@ $(function () {
                 // 有存储直接赋值
                 if (content == key) {
                     $('#iptTo').val(localStorage.getItem(key));
-                    return;
+                    return;   //会直接退出函数
                 }
             }
         }
